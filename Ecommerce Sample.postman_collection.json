@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "6e4cf088-6d69-4559-8119-462333c890e5",
+		"name": "Ecommerce Sample",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Mock Data",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{AppBaseUrl}}api/v1/Product",
+					"host": [
+						"{{AppBaseUrl}}api"
+					],
+					"path": [
+						"v1",
+						"Product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{AppBaseUrl}}api/v1/product/filter?maxPrice&size&highlight",
+					"host": [
+						"{{AppBaseUrl}}api"
+					],
+					"path": [
+						"v1",
+						"product",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "maxPrice",
+							"value": null
+						},
+						{
+							"key": "size",
+							"value": null
+						},
+						{
+							"key": "highlight",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "AppBaseUrl",
+			"value": "https://localhost:44333/",
+			"type": "string"
+		}
+	]
+}
